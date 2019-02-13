@@ -3,7 +3,11 @@ window.onload = function() {
   var file = document.getElementById("thefile");
   var audio = document.getElementById("audio");
   
+  audio.style.display = "none";
+  
   file.onchange = function() {
+    audio.style.display = "block";
+    
     var files = this.files;
     audio.src = URL.createObjectURL(files[0]);
     audio.load();
